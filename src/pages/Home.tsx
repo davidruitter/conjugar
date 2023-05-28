@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Card from '../components/Card';
 
 const Home = () => {
   const [selectedTense, setSelectedTense] = useState('');
@@ -11,7 +12,7 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <h1 className="text-4xl font-bold mb-8">Spanish Conjugation Practice</h1>
-      <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+      <Card>
         <p className="text-lg font-medium mb-4">Select a tense to practice:</p>
         <select
           value={selectedTense}
@@ -34,7 +35,7 @@ const Home = () => {
             </button>
           </Link>
         }
-      </div>
+      </Card>
     </div>
   );
 };

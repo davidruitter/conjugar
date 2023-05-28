@@ -1,11 +1,14 @@
-function App() {
-  return (
-    <>
-    <h1 className="text-3xl font-bold underline">
-      conjugar
-    </h1>
-    </>
-  )
-}
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
-export default App
+const App = () => {
+  return (
+    <Router>
+        <Routes>
+            <Route path="/" Component={Home}/>
+        </Routes>
+    </Router>
+  );
+};
+
+export default App;

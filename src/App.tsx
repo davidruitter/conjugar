@@ -4,7 +4,7 @@ import Conjugation from './pages/Conjugation';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename='/conjugar'>
         <Routes>
             <Route path="/" Component={Home}/>
             <Route path="/practice/*" Component={Conjugation}/>
